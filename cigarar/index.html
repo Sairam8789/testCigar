@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CIGAR CONEXION</title>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://fonts.cdnfonts.com/css/bahnschrift" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDEHmATerZOmjjFVUuw0Jt9NUVqXQdUSzk",
+        authDomain: "cigarar-d7a95.firebaseapp.com",
+        projectId: "cigarar-d7a95",
+        storageBucket: "cigarar-d7a95.appspot.com",
+        messagingSenderId: "369601273226",
+        appId: "1:369601273226:web:78f4ce7258011df5f8bc73",
+        measurementId: "G-V24620L5V4",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </head>
+
+  <body>
+    <div id="homePage" class="cigar-word-break w-10/12 mx-auto cigar-top flex">
+      <div class="flex grow justify-center items-center">
+        <div class="text-center">
+          <h1 class="text-5xl cigar-main-font">CIGAR CONEXION</h1>
+        </div>
+      </div>
+    </div>
+
+    <div id="page-1" class="cigar-word-break w-10/12 mx-auto cigar-top">
+      <div class="grow justify-center items-center flex">
+        <div class="text-center flex flex-col gap-y-20">
+          <h1 class="text-5xl cigar-main-font">CIGAR CONEXION</h1>
+          <!-- <audio id="audio-1" src="./assests/audio/Audio 1 Screen 1.mp3" type="audio/mpeg">
+        </audio> -->
+
+          <h2
+            class="cigar-font-1 text-2xl border-solid border-b-4 cigar-border pb-3.5"
+          >
+            To enter this site you must be 21 years old.
+          </h2>
+          <img
+            src="./assests/yearold21.png"
+            alt="year old"
+            onclick="rockyPopWindow()"
+          />
+        </div>
+      </div>
+      <div
+        class="rockyPop absolute bg-[#7b3c35] w-64 rounded-md mx-auto mt-[250px] content-center self-center border-2 border-[#a0635d] drop-shadow-lg hidden"
+        id="rockyPopContainer"
+      >
+        <div
+          class="w-56 mx-auto text-center py-4 px-4"
+          id="rockyContentContainer"
+        >
+          <a class="cigar-main-font text-[#ffffff]" id="rockyContentDisplay"
+            >Rocky Patel Decade has a rating of 95 Points on cigar Aficionada</a
+          >
+        </div>
+        <img
+          class="w-28 mx-auto py-2"
+          src="./assests/ok.png"
+          id="rockyPopBtn"
+          onclick="closePopUp(this.id)"
+        />
+      </div>
+    </div>
+
+    <div id="page-2" class="cigar-word-break cigar-top">
+      <nav>
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+              <!-- <button
+                type="button"
+                class="inline-flex items-center justify-center rounded-md p-2"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <img
+                  src="./assests/menu button.png"
+                  alt="Menu Button"
+                  class="block h-6 w-6"
+                />
+              </button> -->
+            </div>
+            <div
+              class="inset-y-0 right-0 flex items-center sm:items-stretch sm:justify-start"
+            >
+              <!-- <div
+                class="flex flex-shrink-0 items-center"
+                onclick="backToPage2()"
+              >
+                <img
+                  class="block h-8 w-auto lg:hidden"
+                  src="./assests/back button.png"
+                  alt="Back Button"
+                />
+                <img
+                  class="hidden h-8 w-auto lg:block"
+                  src="./assests/back button.png"
+                  alt="Back Button"
+                />
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="flex-col flex justify-between items-center grow">
+        <div class="flex justify-center w-10/12 mx-auto h-full">
+          <div class="text-center flex flex-col gap-y-4">
+            <div>
+              <h2 class="cigar-font-2 text-2xl">Welcome to</h2>
+              <h1 class="text-5xl cigar-main-font">ROCKY PATEL</h1>
+            </div>
+            <div class="h-full w-full">
+              <model-viewer
+                camera-controls
+                shadow-intensity="1"
+                camera-orbit="0deg 80deg 1.2m"
+                src="./models/Cigar.gltf"
+                ios-src="./models/Cigar.usdz"
+                ar
+                ar-modes="webxr scene-viewer quick-look"
+                alt="cigar"
+              >
+                <button slot="ar-button" style="float: right">
+                  <img
+                    src="./assests/view in ar.png"
+                    alt="buttonpng"
+                    style="width: 100px; border: 0px"
+                    onclick="cigarAudio()"
+                  />
+                </button>
+              </model-viewer>
+            </div>
+            <audio
+              id="audio-2"
+              src="./assests/audio/Audio 2 Screen 2.mp3"
+              type="audio/mpeg"
+            ></audio>
+            <!-- <div>
+              <img
+                src="./assests/start experiencing.png"
+                alt="Start Experience"
+                class="items-center mx-auto w-52"
+              />
+            </div> -->
+          </div>
+        </div>
+        <div class="flex text-center flex-col cigar-bottom-section">
+          <hr class="cigar-hr" />
+          <div class="flex flex-col w-10/12 mx-auto">
+            <img
+              src="./assests/experience your cigar.png"
+              alt="Experience your Cigar"
+              onclick="thirdId()"
+            /><img
+              src="./assests/pair your cigar.png"
+              alt="Pair your Cigar"
+              onclick="fourthId()"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="page-3" class="cigar-word-break cigar-top">
+      <nav>
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+              <button
+                type="button"
+                class="inline-flex items-center justify-center rounded-md p-2"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <img
+                  src="./assests/menu button.png"
+                  alt="Menu Button"
+                  class="block h-6 w-6"
+                />
+              </button>
+            </div>
+            <div
+              class="inset-y-0 right-0 flex items-center sm:items-stretch sm:justify-start"
+            >
+              <div
+                class="flex flex-shrink-0 items-center"
+                onclick="backToPage3()"
+              >
+                <img
+                  class="block h-8 w-auto lg:hidden"
+                  src="./assests/back button.png"
+                  alt="Back Button"
+                />
+                <img
+                  class="hidden h-8 w-auto lg:block"
+                  src="./assests/back button.png"
+                  alt="Back Button"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="flex-col flex justify-between items-center grow">
+        <div class="flex justify-center items-center w-10/12 mx-auto h-full">
+          <div class="text-center">
+            <h1 class="text-5xl cigar-font-2">Experience your Cigar</h1>
+          </div>
+        </div>
+        <div class="flex text-center flex-col cigar-bottom-section">
+          <hr class="cigar-hr" />
+          <div class="flex flex-col w-10/12 mx-auto">
+            <img
+              src="./assests/Cut your igar.png"
+              id="cut"
+              alt="Cut your Cigar"
+              onclick="fifthId(this.id)"
+            />
+            <audio
+              id="cut-audio"
+              src="./assests/audio/Audio 4 Screen Cut your Cigar.mp3"
+              type="audio/mpeg"
+            ></audio>
+            <img
+              src="./assests/Roast your cigar.png"
+              id="roast"
+              alt="Roast your cigar"
+              onclick="fifthId(this.id)"
+            />
+            <audio
+              id="roast-audio"
+              src="./assests/audio/Audio 5 Roast your Cigar .mp3"
+              type="audio/mpeg"
+            ></audio>
+            <img
+              src="./assests/light your cigar.png"
+              id="light"
+              alt="Light your Cigar"
+              onclick="fifthId(this.id)"
+            />
+            <audio
+              id="light-audio"
+              src="./assests/audio/Audio 6 Light your  Cigar 1.mp3"
+              type="audio/mpeg"
+            ></audio>
+            <img
+              src="./assests/Smoke your cigar.png"
+              id="smoke"
+              alt="Smoke your Cigar"
+              onclick="fifthId(this.id)"
+            />
+            <audio
+              id="smoke-audio"
+              src="./assests/audio/Audio 7 Smoke Your Cigar.mp3"
+              type="audio/mpeg"
+            ></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="page-4" class="cigar-word-break cigar-top">
+      <nav>
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+              <button
+                type="button"
+                class="inline-flex items-center justify-center rounded-md p-2"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <img
+                  src="./assests/menu button.png"
+                  alt="Menu Button"
+                  class="block h-6 w-6"
+                />
+              </button>
+            </div>
+            <div
+              class="inset-y-0 right-0 flex items-center sm:items-stretch sm:justify-start"
+            >
+              <div
+                class="flex flex-shrink-0 items-center"
+                onclick="backToPage3()"
+              >
+                <img
+                  class="block h-8 w-auto lg:hidden"
+                  src="./assests/back button.png"
+                  alt="Back Button"
+                />
+                <img
+                  class="hidden h-8 w-auto lg:block"
+                  src="./assests/back button.png"
+                  alt="Back Button"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="flex-col flex justify-between items-center grow">
+        <div class="flex justify-center items-center w-10/12 mx-auto h-full">
+          <div class="text-center">
+            <h1 class="text-5xl cigar-font-2">Pair your Cigar</h1>
+          </div>
+        </div>
+        <div class="flex text-center flex-col cigar-bottom-section">
+          <hr class="cigar-hr" />
+          <div class="flex flex-col w-10/12 mx-auto">
+            <img
+              id="beverage"
+              src="./assests/Beverages.png"
+              alt="Pair with beverages"
+              onclick="fifthId(this.id)"
+            />
+            <audio
+              id="beverage-audio"
+              src="./assests/audio/Audio 10 Pair with Beverage.mp3"
+              type="audio/mpeg"
+            ></audio>
+            <img
+              id="alcohol"
+              src="./assests/Alcohol.png"
+              alt="Pair with alcohol"
+              onclick="fifthId(this.id)"
+            />
+            <audio
+              id="alcohol-audio"
+              src="./assests/audio/Audio 9 Pair with Alcohol.mp3"
+              type="audio/mpeg"
+            ></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="page-5" class="cigar-word-break cigar-top">
+      <nav>
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+              <button
+                type="button"
+                class="inline-flex items-center justify-center rounded-md p-2"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <img
+                  src="./assests/menu button.png"
+                  alt="Menu Button"
+                  class="block h-6 w-6"
+                />
+              </button>
+            </div>
+            <div
+              class="inset-y-0 right-0 flex items-center sm:items-stretch sm:justify-start"
+            >
+              <div
+                class="flex flex-shrink-0 items-center"
+                onclick="backToPage5()"
+              >
+                <img
+                  class="block h-8 w-auto lg:hidden"
+                  src="./assests/back button.png"
+                  alt="Back Button"
+                />
+                <img
+                  class="hidden h-8 w-auto lg:block"
+                  src="./assests/back button.png"
+                  alt="Back Button"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="flex-col flex justify-between items-center grow">
+        <!--         <button id="hotspotButton" class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-12 border-b-4 border-red-700 hover:border-red-500 rounded"
+        slot="hotspot-one" onclick="playAnimation()"
+        data-position="..." data-normal="...">PLAY</button> -->
+
+        <model-viewer
+          style="
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            background-color: aliceblue;
+          "
+          id="Cigar"
+          src=""
+          loading="eager"
+          camera-controls
+          alt="Cigar"
+          ar
+          ar-scale="${100}${100}${100}"
+          shadow-intensity="1"
+          ios-src=""
+          autoplay
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+        >
+          <button slot="ar-button" style="float: right">
+            <img
+              src="./assests/view in ar.png"
+              alt="buttonpng"
+              style="width: 120px; border: 0px"
+              onclick="playAudio();"
+            />
+          </button>
+          <div
+            class="popUp bg-[#7b3c35] w-64 rounded-md mt-[350px] mx-auto content-center self-center border-2 border-[#a0635d] drop-shadow-lg"
+            id="popUpContainer"
+          >
+            <div
+              class="w-56 mx-auto text-center py-4 px-4"
+              id="contentContainer"
+            >
+              <a class="cigar-main-font text-[#ffffff]" id="contentDisplay"></a>
+            </div>
+            <img
+              class="w-28 mx-auto py-2"
+              src="./assests/ok.png"
+              id="popUpBtn"
+              onclick="closePopUp(this.id)"
+            />
+          </div>
+        </model-viewer>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
